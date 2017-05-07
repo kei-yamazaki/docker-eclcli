@@ -1,0 +1,12 @@
+sudo: required
+language: go
+services:
+  - docker
+before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t yamazaki/eclcli .
+  - docker push yamazaki/eclcli
+install:
+  - echo "install nothing."
+script:
+  - echo "no tests."
