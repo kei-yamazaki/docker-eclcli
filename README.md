@@ -17,5 +17,5 @@ docker run yamazaki/eclcli
 If the configuration file already exists, mount the configuration file as follows.
 
 ```
-docker run -v ~/.config/ecl:/root/.config/ecl yamazaki/eclcli --os-cloud <name> compute server list
+docker run -v ~/.config/ecl:/root/.config/ecl -it yamazaki/eclcli --os-cloud <name> compute server list
 ```
